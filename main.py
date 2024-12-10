@@ -28,7 +28,7 @@ def download_audio(video_id):
     
     return output_template
 
-@app.route('/download-mp3/<video_id>', methods=['GET'])
+@app.route('/<video_id>', methods=['GET'])
 def download_mp3(video_id):
     """
     Flask route to download the YouTube video as an MP3 and send it to the user.
@@ -52,4 +52,4 @@ def download_mp3(video_id):
         abort(500, f"Error processing video: {str(e)}")
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=6000)
+    app.run(debug=True, host='0.0.0.0', port=5000)
